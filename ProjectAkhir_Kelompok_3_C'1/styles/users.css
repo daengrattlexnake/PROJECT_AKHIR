@@ -1,0 +1,175 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --sidebar-bg: #1a202c;
+    --sidebar-link-hover: #2d3748;
+}
+
+/* General styling */
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.flex {
+    display: flex;
+}
+
+/* Sidebar styling */
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    width: 200px;
+    padding: 2rem;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: var(--sidebar-link-hover);
+}
+
+/* Centering and styling for the data-user-section */
+.data-user-section {
+    display: flex;
+    flex-direction: column;
+    /* Tengah secara vertikal */
+    align-items: center;
+    /* Tengah secara horizontal */
+    width: 100%;
+    padding: 20px;
+    background-color: #f8f9fa;
+    height: 70vh;
+    /* Pastikan tinggi area sama dengan tinggi viewport */
+}
+
+/* Table Heading Styling */
+.table-heading {
+    text-align: center;
+    font-size: 1.5em;
+    margin-bottom: 200px;
+    color: #333;
+}
+
+.table-mahasiswa {
+    width: 80%;
+    border-collapse: collapse;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin: 0 auto; /* Memastikan tabel berada di tengah */
+}
+
+.table-mahasiswa th,
+.table-mahasiswa td {
+    padding: 12px 15px;
+    text-align: center;
+}
+
+.table-mahasiswa thead tr {
+    background-color: #1a202c;
+    color: #fff;
+}
+
+.table-mahasiswa tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.table-mahasiswa tbody tr:hover {
+    background-color: #e9e9e9;
+}
+
+.tambah-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start; /* Posisi tombol di kiri */
+    margin-bottom: 2px; /* Jarak antara tombol dan tabel */
+    margin-left: 20%;
+}
+
+.tambah {
+    background-color: #1a202c;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 20px; /* Memberikan jarak bawah */
+    margin-left: 0; /* Posisi kiri (tetap di kiri) */
+    display: inline-block; /* Agar tombol tidak menjadi blok penuh */
+}
+
+button {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.8;
+}
+
+/* Buttons styling */
+button {
+    background-color: #1a202c;
+    color: white;
+}
+
+button.delete {
+    background-color: #f44336;
+}
+
+a {
+    text-decoration: none;
+    /* Menghapus garis bawah pada link */
+}
+
+button.tambah {
+    display: inline-block;
+    /* Agar tombol tampil di dalam link */
+    background-color: #1a202c;
+    /* Warna latar belakang tombol */
+    color: white;
+    /* Warna teks */
+    padding: 10px 20px;
+    /* Padding agar tombol lebih besar */
+    border: none;
+    /* Menghapus border default */
+    border-radius: 4px;
+    /* Sudut melengkung pada tombol */
+    cursor: pointer;
+    /* Menunjukkan pointer saat hover */
+    font-size: 16px;
+    /* Ukuran font */
+    text-align: center;
+    /* Menyelaraskan teks di tengah */
+    transition: background-color 0.2s ease-in-out;
+    /* Efek transisi saat hover */
+}
+
+button.tambah:hover {
+    background-color: #2d3748;
+    /* Mengubah warna saat hover */
+}

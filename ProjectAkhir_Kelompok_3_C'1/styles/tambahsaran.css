@@ -1,0 +1,213 @@
+/* tambahsaran.css */
+
+/* Reset dan style dasar */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #1A2A3F;
+    color: white;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #0D2444;
+    padding: 1rem 5%;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+/* Container utama */
+.container {
+    padding: 120px 5% 5rem;
+    min-height: calc(100vh - 200px);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Judul Section */
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #7FB3FA;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+/* Form Saran */
+.suggestion-form {
+    background-color: #0D2444;
+    padding: 2.5rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.8rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.8rem;
+    color: #7FB3FA;
+    font-weight: 500;
+    font-size: 1.1rem;
+}
+
+/* Select styling */
+.form-group select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #2563EB;
+    border-radius: 8px;
+    background-color: #0A1A2F;
+    color: white;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+/* Textarea styling */
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #2563EB;
+    border-radius: 8px;
+    background-color: #0A1A2F;
+    color: white;
+    font-size: 1rem;
+    resize: vertical;
+    min-height: 150px;
+    transition: all 0.3s ease;
+}
+
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: #7FB3FA;
+    box-shadow: 0 0 0 3px rgba(127, 179, 250, 0.2);
+    outline: none;
+}
+
+/* Character count */
+.char-count {
+    text-align: right;
+    font-size: 0.9rem;
+    color: #7FB3FA;
+    margin-top: 0.5rem;
+}
+
+/* Form Actions */
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+/* Button styling */
+.submit-btn, .cancel-btn {
+    padding: 1rem 2rem;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+    text-decoration: none;
+    flex: 1;
+}
+
+.submit-btn {
+    background-color: #2563EB;
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    background-color: #64748B;
+    color: white;
+    border: none;
+}
+
+.submit-btn:hover {
+    background-color: #1D4ED8;
+    transform: translateY(-2px);
+}
+
+.cancel-btn:hover {
+    background-color: #475569;
+    transform: translateY(-2px);
+}
+
+/* Alert Messages */
+.alert {
+    padding: 1rem;
+    margin-bottom: 2rem;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.alert-danger {
+    background-color: rgba(220, 38, 38, 0.1);
+    border: 1px solid #DC2626;
+    color: #FCA5A5;
+}
+
+.alert-success {
+    background-color: rgba(34, 197, 94, 0.1);
+    border: 1px solid #22C55E;
+    color: #86EFAC;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        padding: 100px 1rem 3rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .suggestion-form {
+        padding: 1.5rem;
+    }
+
+    .form-actions {
+        flex-direction: column;
+    }
+
+    .submit-btn, .cancel-btn {
+        width: 100%;
+    }
+}
+
+/* Navbar Responsive */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #0D2444;
+        padding: 1rem;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+}

@@ -1,0 +1,356 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#bgvideo{
+    width: 100%;
+    height: 90vh;
+    object-fit: cover;
+    position: relative; /* Atur posisi relative untuk menampung .videodesc */
+}
+
+.videodesc{
+    z-index: 99;
+    position: absolute; /* Ubah dari relative ke absolute */
+    top: 50%; /* Posisikan di tengah video */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    font-size: 1.8rem;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*gambargerak*/
+.deskripsi {
+    display: flex; 
+    align-items: flex-start; 
+    justify-content: flex-start; 
+    max-width: 100%; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: #ffffff; 
+    border-radius: 8px; 
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); 
+  }
+
+  /* Atur ukuran gambar */
+  #gambarlogo {
+    width: 300px;               /* Tetapkan lebar gambar tetap */
+    height: auto;               /* Menjaga rasio aspek gambar */
+    object-fit: contain;
+  }
+  
+
+  /* Styling untuk teks di sebelah kanan */
+  .tulisan {
+    width: 200%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 18px;
+    color: #000000; /* Warna teks utama */
+    line-height: 1.6; /* Jarak antar baris untuk memudahkan pembacaan */
+    text-align: left; /* Menyeimbangkan teks di kedua sisi */
+    margin: 20px 0; /* Menambahkan margin atas dan bawah untuk jarak */
+    padding: 20px; /* Memberikan jarak di dalam elemen */
+    background-color: #ffffff;
+    max-width: 60%; /* Lebar maksimum untuk menjaga agar teks tidak terlalu lebar */
+    overflow-wrap: break-word; /* Memastikan kata yang panjang tidak melampaui batas */
+    border-radius: 8px; /* Menambahkan sudut yang melengkung */
+  }
+
+  /* Menonjolkan kata "Game Alpha Shop Platform" */
+  .tulisan .highlight {
+    font-weight: bold; /* Membuat teks tebal */
+    font-size: 20px; /* Sedikit lebih besar untuk menarik perhatian */
+  }
+
+  .judul {
+    margin-top: 2%;
+    font-size: 500%; /* Ukuran font lebih besar untuk judul */
+    padding-bottom: 10px; /* Jarak antara judul dan teks */
+    font-weight: bold; /* Memberikan tebal pada teks judul */
+    text-align: center; /* Meratakan teks ke kiri */
+  }
+
+
+
+/* Styling untuk section developer */
+.developer-section {
+    padding: 60px 5%;
+    background-color: #f5f5f5;
+    margin-top: 40px;
+}
+
+.developer-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    color: #0D2444;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.developer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.developer-card {
+    background-color: white;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.developer-card:hover {
+    transform: translateY(-5px);
+}
+
+.developer-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    object-fit: cover;
+    border: 4px solid #0D2444;
+}
+
+.developer-name {
+    font-size: 1.5rem;
+    color: #0D2444;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.developer-role {
+    color: #7FB3FA;
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.developer-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}  
+
+
+
+/* Footer */
+footer {
+    background-color: #0D2444;
+    padding: 4rem 5% 2rem;
+}
+
+.footer-content {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+}
+
+.footer-section h3 {
+    color: #7FB3FA;
+    margin-bottom: 1.5rem;
+}
+
+.footer-section p {
+    color: white;
+    margin-bottom: 1.5rem;
+}
+
+.footer-links {
+    list-style: none;
+}
+
+.footer-links li {
+    margin-bottom: 0.5rem;
+}
+
+.footer-links a {
+    color: #7FB3FA;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.footer-links a:hover {
+    color: white;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 3rem;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(127, 179, 250, 0.2);
+    color: #7FB3FA;
+}
+
+/* Media Queries untuk Mobile */
+@media screen and (max-width: 768px) {
+    /* Header Video */
+    #bgvideo {
+        height: 60vh;
+    }
+
+    .videodesc {
+        font-size: 1rem;
+        width: 90%;
+    }
+
+    .videodesc img {
+        width: 80%;
+        height: auto;
+    }
+
+    .videodesc h1 {
+        font-size: 2rem;
+    }
+
+    .videodesc h2 {
+        font-size: 1.5rem;
+    }
+
+    .videodesc p {
+        font-size: 1rem;
+    }
+
+    /* Deskripsi Section */
+    .deskripsi {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+    }
+
+    #gambarlogo {
+        width: 200px;
+        margin-bottom: 20px;
+    }
+
+    .judul {
+        font-size: 2.5rem;
+        margin-bottom: 15px;
+    }
+
+    .tulisan {
+        width: 100%;
+        max-width: 100%;
+        font-size: 16px;
+        padding: 15px;
+        margin: 10px 0;
+    }
+
+    /* Developer Section */
+    .developer-section {
+        padding: 30px 15px;
+    }
+
+    .developer-title {
+        font-size: 2rem;
+        margin-bottom: 25px;
+    }
+
+    .developer-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .developer-card {
+        padding: 15px;
+    }
+
+    .developer-image {
+        width: 120px;
+        height: 120px;
+    }
+
+    .developer-name {
+        font-size: 1.2rem;
+    }
+
+    .developer-description {
+        font-size: 0.85rem;
+    }
+
+    /* Footer Adjustments */
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-section {
+        margin-bottom: 20px;
+    }
+
+    .footer-links {
+        justify-content: center;
+    }
+}
+
+/* Media Queries untuk devices yang sangat kecil */
+@media screen and (max-width: 480px) {
+    .videodesc h1 {
+        font-size: 1.5rem;
+    }
+
+    .videodesc h2 {
+        font-size: 1.2rem;
+    }
+
+    .judul {
+        font-size: 2rem;
+    }
+
+    #gambarlogo {
+        width: 150px;
+    }
+
+    .developer-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .developer-name {
+        font-size: 1.1rem;
+    }
+
+    .developer-description {
+        font-size: 0.8rem;
+    }
+}
+
+/* Perbaikan untuk orientasi landscape pada mobile */
+@media screen and (max-height: 480px) and (orientation: landscape) {
+    #bgvideo {
+        height: 100vh;
+    }
+
+    .videodesc {
+        font-size: 0.9rem;
+    }
+
+    .developer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}

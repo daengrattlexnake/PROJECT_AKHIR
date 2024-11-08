@@ -1,0 +1,94 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Variables */
+:root {
+    --sidebar-bg: #1a202c;
+    --sidebar-link-hover: #2d3748;
+    --content-bg: #f7fafc;
+    --card-bg: #fff;
+    --card-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px 0 rgba(0, 0, 0, 0.06);
+}
+
+/* Layout */
+body {
+    display: flex;
+    height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    width: 200px;
+    padding: 2rem;
+}
+
+.sidebar h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+}
+
+.sidebar-link {
+    display: block;
+    padding: 0.5rem 1rem;
+    border-radius: 0.375rem;
+    color: #fff;
+    text-decoration: none;
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar-link:hover,
+.sidebar-link.active {
+    background-color: var(--sidebar-link-hover);
+}
+
+.content {
+    flex: 1;
+    background-color: var(--content-bg);
+    padding: 2rem;
+}
+
+.card {
+    background-color: var(--card-bg);
+    border-radius: 0.375rem;
+    box-shadow: var(--card-shadow);
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.card h3 {
+    font-size: 1.25rem;
+    font-weight: bold;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th,
+td {
+    padding: 0.75rem 1rem;
+    text-align: left;
+}
+
+th {
+    background-color: #f1f5f9;
+}
+
+tr:nth-child(even) {
+    background-color: #f1f5f9;
+}

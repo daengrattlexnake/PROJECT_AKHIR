@@ -1,0 +1,152 @@
+body {
+    font-family: 'Arial', sans-serif;
+    color: white;
+    background-color: #0A1A2F;
+}
+
+.latar {
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(assets/backroundloginregis.jpg);
+    background-size: 1350px;
+}
+
+.kotak-login {
+    border-radius: 5px;
+    border: 1 solid;
+    border-radius: 25px;
+    box-shadow: 0;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: #0A1A2F;
+    animation: colorChange 5s infinite alternate;
+}
+
+@keyframes colorChange {
+    0% {
+        background-color: #1b457d;
+    }
+
+    100% {
+        background-color: #0A1A2F;
+    }
+}
+
+.judul {
+    display: flex;
+    font-size: 40px;
+    text-align: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-isi {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.form-judul {
+    font-size: 25px;
+}
+
+.form-input {
+    border: 1px solid;
+    border-radius: 25px;
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 20px;
+    height: 35px;
+}
+
+.login-button {
+    border: 0;
+    border-radius: 25px;
+    background-color: #2563EB;
+    color: white;
+    font-weight: 700;
+    font-size: 20px;
+    padding-top: 15px;
+    padding-bottom: 20px;
+    margin-top: auto;
+    cursor: pointer;
+    width: 100%;
+}
+
+.login-button:hover {
+    background-color: #1D4ED8;
+}
+
+p {
+    font-size: 15px;
+}
+
+.link {
+    font-size: 15px;
+    color: aquamarine;
+    text-decoration: none;
+}
+
+
+input[type="password"]::-ms-reveal {
+    display: none;
+}
+
+.password-container {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 20px;
+    top: 75%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    width: 24px;
+    height: 24px;
+}
+
+.menu-btn {
+    display: none;
+    /* Hidden by default on desktop */
+    background: none;
+    border: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px 10px;
+}
+
+/* Show hamburger menu on mobile devices */
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        /* Show on mobile */
+    }
+
+    .nav-links {
+        display: none;
+        /* Hide navigation links by default on mobile */
+    }
+
+    .nav-links.active {
+        display: flex;
+        /* Show when active */
+        flex-direction: column;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: #0A1A2F;
+        padding: 20px;
+    }
+}
